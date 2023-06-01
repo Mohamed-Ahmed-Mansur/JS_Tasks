@@ -33,20 +33,21 @@ addTask.addEventListener('click', () => {
         cell4.appendChild(editButton);
         cell4.appendChild(removeButton);
         // Assigning an id for each new button
-        editButton.setAttribute("id", "new-button");
-        removeButton.setAttribute("id", "new-button");
+        editButton.setAttribute("id", "edit-button");
+        removeButton.setAttribute("id", "remove-button");
         // Take actions onclick for each new button
         removeButton.addEventListener('click', () => {
             row.style.display = 'none';
         });
         editButton.addEventListener('click', () => {
+            editButton.style.display = 'none';
             // Creating new inputs when edit button takes action
             const newInput1 = document.createElement('input');
             const newInput2 = document.createElement('input');
             newInput1.setAttribute('placeholder', 'please edit your task name');
             newInput2.setAttribute('placeholder', 'please edit your priority level');
-            newInput1.setAttribute('id', 'new-input');
-            newInput2.setAttribute('id', 'new-input');
+            newInput1.setAttribute('id', 'new-input-1');
+            newInput2.setAttribute('id', 'new-input-2');
             newInput1.setAttribute('value', cell2.innerHTML);
             newInput2.setAttribute('value', cell3.innerHTML);
             cell2.innerHTML = "";
@@ -63,13 +64,14 @@ addTask.addEventListener('click', () => {
             cell4.appendChild(saveButton);
             cell4.appendChild(deleteButton);
             // Assigning an id for each new button
-            saveButton.setAttribute("id", "hide-button");
-            deleteButton.setAttribute("id", "hide-button");
+            saveButton.setAttribute("id", "save-button");
+            deleteButton.setAttribute("id", "delete-button");
             saveButton.addEventListener('click', () => {
                 validation(newInput1.value, newInput2.value);
                 if (newInput1.value != "" && arr.includes(newInput2.value) != false) {
                     saveButton.style.display = 'none';
                     deleteButton.style.display = 'none';
+                    editButton.style.display = 'inline';
                     cell2.innerHTML = newInput1.value;
                     cell3.innerHTML = newInput2.value;
                 }
@@ -78,7 +80,6 @@ addTask.addEventListener('click', () => {
                 newInput1.value = '';
                 newInput2.value = '';
             });
-            saveButton.style.display != 'none' ? editButton.disabled = 'true' : editButton.enabled = 'true';
         });
     }
 });
