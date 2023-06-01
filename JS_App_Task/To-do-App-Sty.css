@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+}
+
+.insert-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto;
+    width: 60vw;
+}
+
+.insert-box input {
+    width: 40%;
+    padding: 6.5px;
+}
+
+.insert-box #add {
+    background-color: green;
+    color: white;
+    width: 50px;
+    height: 32px;
+    border-radius: 10%;
+    border: 0;
+    cursor: pointer;
+    
+}
+
+#add:active {
+    background-color: darkgreen;
+}
+
+.list-of-Tasks {
+    width: 60vw;
+    border: 0;
+}
+
+table {
+    width: 90%;
+}
+
+table tbody tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid cadetblue;
+    padding-right: 60px;
+    margin: 20px 0;
+}
+
+table thead tr {
+    border-bottom: 1px solid darkslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid cadetblue;
+    padding-right: 150px;
+    margin: 20px 0;
+}
+
+#new-button {
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 32px;
+    border-radius: 10%;
+    border: 0;
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+    right: 45px;
+}
+
+#new-button:active {
+    background-color: darkblue;
+}
