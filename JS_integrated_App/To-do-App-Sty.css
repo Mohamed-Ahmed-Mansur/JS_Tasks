@@ -23,8 +23,20 @@ body {
     font-family: cursive;
 }
 
+/* The animation code */
+@keyframes example {
+    to {color: yellow;}
+    from {transform: rotateX(45deg);}
+    to {transform: rotateY(45deg);}
+}
+  
+/* The element to apply the animation to */
 .title {
     text-align: center;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: rotateX(45deg);
 }
 
 .insert-box {
@@ -113,3 +125,4 @@ table thead tr {
 #new-input-1, #new-input-2 {
     padding: 6.5px;
 }
+
