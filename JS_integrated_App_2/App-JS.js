@@ -48,8 +48,10 @@ addTask.addEventListener('click', () => {
             row.style.display = 'none';
             tasksArray.splice(tasksArray.indexOf(cell2.innerHTML), 1);
         });
+        console.log(tasksArray);
         editButton.addEventListener('click', () => {
             editButton.style.display = 'none';
+            removeButton.style.display = 'none';
             addTask.disabled = true;
             const targetIndex = tasksArray.indexOf(cell2.innerHTML);
             tasksArray.splice(tasksArray.indexOf(cell2.innerHTML), 1);
@@ -86,6 +88,7 @@ addTask.addEventListener('click', () => {
                     saveButton.style.display = 'none';
                     deleteButton.style.display = 'none';
                     editButton.style.display = 'inline';
+                    removeButton.style.display = 'inline';
                     addTask.disabled = false;
                     cell2.innerHTML = newTaskName.value;
                     cell3.innerHTML = priorityLevels.value;

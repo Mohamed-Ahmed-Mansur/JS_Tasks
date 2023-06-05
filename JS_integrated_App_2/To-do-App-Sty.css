@@ -77,7 +77,7 @@ header {
     font-size: 12pt;
     background: transparent;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -173,8 +173,8 @@ table tbody tr {
     align-items: center;
     border-bottom: 1px solid cadetblue;
     padding-right: 60px;
-    margin: 20px 0;
-    width: 100%;
+    margin: 20px 5px;
+    width: 105%;
 }
 
 #edit-button, #remove-button, #delete-button, #save-button {
@@ -220,10 +220,15 @@ table tbody tr {
     font-size: 12pt;
     background: transparent;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
 #new-row #priority option {
     background-color: rgba(0,0,0,0.5);
+}
+
+.list-of-Tasks #action {
+    position: relative;
+    left: 40px;
 }
