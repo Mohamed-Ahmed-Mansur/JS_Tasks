@@ -14,9 +14,16 @@
                 <h1>To do list Application</h1>
             </div>
             <div class="insert-box">
-                <input placeholder="Add Task Name" id="task" required/>
-                <input placeholder="Please describe priority low, intermidiate or high" id="priority" required/>
+                <input placeholder="Add Your Task Name" id="task" required/>
+                <label for="priority">Pick task priority</label>
+                <select id="priority">
+                    <option>low</option>
+                    <option>intermediate</option>
+                    <option>high</option>
+                </select>
                 <input type="submit" value="Add" id="add"/>
+                <div class="spinner">
+                </div>
             </div>
             <fieldset class="list-of-Tasks">
                 <table>
