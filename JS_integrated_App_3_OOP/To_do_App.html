@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Integrated-Sty.css">
+    <title>Tasks list</title>
+</head>
+<body>
+    <header>
+        <section class="container">
+            <div class="title">
+                <h1>To do list Application</h1>
+            </div>
+            <div class="insert-box">
+                <input placeholder="Add Your Task Name" id="task" required/>
+                <label for="priority">Pick task priority</label>
+                <select id="priority">
+                    <option>low</option>
+                    <option>intermediate</option>
+                    <option>high</option>
+                </select>
+                <input type="submit" value="Add" id="add"/>
+                <div class="spinner">
+                </div>
+            </div>
+            <fieldset class="list-of-Tasks">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Task Name</td>
+                            <td>Priority</td>
+                            <td id="action">Action</td>
+                        </tr> 
+                    </thead>
+                    <tbody id="insert-Task">
+              
+                    </thead>
+                </table>
+            </fieldset>
+        </section>
+    </header>
+    <script src="js/App-JS.js"></script>
+</body>
+</html>
