@@ -4,7 +4,18 @@ let taskArray = [];
 let noDublicate = [];
 let tasksArray = [];
 let taskIndex = 0;
-let tasksList = {};
+let tasksList = {
+    name: '',
+    priority: ''
+};
+let tasksArr = [];
+
+class Task {
+    constructor(obj) {
+        this.name = obj.name,
+        this.priority = obj.priority
+    }
+}
 
 function validation(x) {
     x === "" || tasksArray.includes(x) === true ? alert('you entered a wrong or repeated task name') : x;
@@ -17,11 +28,19 @@ addTask.addEventListener('click', () => {
     if (taskName != "" && tasksArray.includes(taskName) === false) {
         //document.getElementById('task').value = '';
         // sorting table rows with no dublicate task name
+
+        // impelementing OOP
         tasksArray.push(taskName);
         tasksArray.sort();
         taskIndex = tasksArray.indexOf(taskName);
-        tasksList[taskName] = selectedPriority;
+        tasksList.name = taskName;
+        tasksList.priority = selectedPriority;
+        let myTask = new Task(tasksList);
+        tasksArr.push(tasksList);
         console.log(tasksList);
+        console.log(tasksArr);
+        console.log(myTask);
+
         // Adding new rows and columns
         const row = listOfTaskes.insertRow(taskIndex);
         const cell1 = row.insertCell(0);
